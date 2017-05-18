@@ -1,8 +1,14 @@
 {
   "name": "avrodoc",
   "description": "Documentation tool for Avro schemas",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "author": "Martin Kleppmann http://martinkl.com/",
+  "contributors": [
+    {
+      "name": "Javier Moreno Molina",
+      "email": "javiermoreno@ieee.org"
+    }
+  ],
   "bin": "./bin/avrodoc",
   "scripts": {
     "start": "node app",

@@ -148,7 +148,12 @@ AvroDoc.Schema = function (avrodoc, shared_types, schema_json, filename) {
         if (type) {
             return type;
         } else {
-            throw 'Unknown type name ' + JSON.stringify(name) + ' at ' + path;
+            var imported_type = shared_types[qualifiedName(name, namespace)];
+	    if (imported_type) {
+		return imported_type[imported_type.length-1];
+	    } else {
+                throw 'Unknown type name ' + JSON.stringify(name) + ' at ' + path;
+	    }
         }
     }
 
